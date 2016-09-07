@@ -4,7 +4,7 @@ Program: util.cpp basic functions
 Description: 
 Shanbo Cheng: cshanbo@gmail.com
 Date: 2016-07-05 20:46:23
-Last modified: 2016-09-07 16:16:01
+Last modified: 2016-09-07 19:28:41
 GCC version: 4.7.3
 */
 
@@ -60,7 +60,18 @@ int seg_words(SingleLineResult& slr, cppjieba::Jieba& segmenter) {
     
     std::vector<cppjieba::Word> jiebawords;
     segmenter.CutForSearch(slr.current_line, jiebawords, true);
-    cout << jiebawords << endl;
+
+    for(auto item: jiebawords) {
+        token_len = item.word.length();
+        if(token_len > MAX_TERM_LENGTH)
+            return -1;
+        RecogObj ro;
+        ro.tag = "wordseg";
+        ro.span[0] = item.offset;
+        ro.span[1] = ro.span[0] + token_len;
+        ro.result["content"] = item.word;
+        slr.word_list.push_back(ro);
+    }
 
     // if(slr.pout->wsbtermcount > 0 )
     // {
