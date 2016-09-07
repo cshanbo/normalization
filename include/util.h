@@ -23,5 +23,4 @@ string &trim(string &line);
 
 void string_replace(string &origin, const string &src, const string &tgt);
 
-sad
 #endif

@@ -4,12 +4,13 @@ Program: util.cpp basic functions
 Description: 
 Shanbo Cheng: cshanbo@gmail.com
 Date: 2016-07-05 20:46:23
-Last modified: 2016-07-08 15:49:45
+Last modified: 2016-09-07 14:28:26
 GCC version: 4.7.3
 */
 
 #include "../include/util.h"
 #include <string>
+
 using namespace std;
 
 void split(const string &src, const string &separator, vector<string>& dest_list) {
