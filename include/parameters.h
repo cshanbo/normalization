@@ -26,9 +26,9 @@ Last modified: 2016-09-07 13:34:29
 #include <vector>
 #include <iostream>
 #include <unordered_map>
+#include "./3rd/include/Jieba.hpp"
 
 /*RecogObj存储识别结果和处理后的分词结果*/
-
 typedef struct Recognition {
     std::string name;   //名称time_commont,
     std::string tag;    //tag 例如识别出为time_common类,tag可能是date time等
@@ -51,45 +51,14 @@ typedef struct SingleLineResult {
     std::vector<RecogObj> result_list;  //识别结果list<RecogObj>
     std::unordered_map<std::string, int> feature_map;  //特征map, string-->int  string为OBJ的content加上一些标记，如"F-"等
     int end_index[REGEX_RULE_COUNT];    //每个规则识别出的end_index
-    scw_out_t *pout;        //用词，存储分词之后的结果
-    SingleLineResult()
-    {
-        for (int i = 0; i < REGEX_RULE_COUNT; ++i)
-        {
-            end_index[i] = -1;
-        }
-        pout = NULL;
-        if((pout = scw_create_out(MAX_TERM_COUNT * 2, SCW_OUT_FLAG)) == NULL)
-        {
-            std::cerr << "error: initializing the output buffer error." << std::endl;
-            return;
-        }
-    }
-    int clear()
-    {
-        current_line = "";
-        unicode_string_list.clear();
-        index_map.clear();
-        reversed_index_map.clear();
-        word_list.clear();
-        result_list.clear();
-        feature_map.clear();
-        for (int i = 0; i < REGEX_RULE_COUNT; ++i)
-        {
-            end_index[i] = -1;
-        }
-        return 0;
-    }
-    ~SingleLineResult()
-    {
-        clear();
-        if (pout != NULL)
-        {
-            scw_destroy_out(pout);
-            pout = NULL;
+    
+    // scw_out_t *pout;        //用词，存储分词之后的结果
+    std::vector<cppjieba::Word> pout;
+    SingleLineResult();
+    ~SingleLineResult();
 
-        }
-    }
+    int clear();
+
 } SingleLineResult;
 
 #endif

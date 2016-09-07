@@ -15,6 +15,8 @@ GCC version: 4.9.3
 #include <string>
 #include <vector>
 
+#include "parameters.h"
+
 using namespace std;
 
 void split(const string &src, const string &separator, vector<string> &dest_list);
@@ -22,5 +24,7 @@ void split(const string &src, const string &separator, vector<string> &dest_list
 string &trim(string &line);
 
 void string_replace(string &origin, const string &src, const string &tgt);
+
+int seg_words(SingleLineResult&, cppjieba::Jieba&);
 
 #endif
