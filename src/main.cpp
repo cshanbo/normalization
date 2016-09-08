@@ -3,7 +3,7 @@
 Program: test
 Description: 
 Date: 2016-07-05 21:07:39
-Last modified: 2016-09-08 10:38:09
+Last modified: 2016-09-08 10:47:55
 GCC version: 4.7.3
 */
 
@@ -58,7 +58,6 @@ int main(int argc, char* argv[]) {
     s = "小明硕士毕业于中国科学院计算所后在日本京都大学深造";
     std::vector<cppjieba::Word> jiebawords;
     norm->segmenter->CutForSearch(s, jiebawords, true);
-    // jieba.CutForSearch(s, jiebawords, true);
     cout << s << endl;
     for(auto jbwd: jiebawords) {
         cout << jbwd.word << '\t' << jbwd.offset << "-" << jbwd.offset + jbwd.word.length() << endl;

@@ -4,7 +4,7 @@ Program: Implementation of parameter
 Description: 
 Author: cshanbo@gmail.com
 Date: 2016-09-07 15:43:39
-Last modified: 2016-09-07 15:48:54
+Last modified: 2016-09-08 10:49:24
 **********************************************/
 
 
@@ -35,9 +35,4 @@ int SingleLineResult::clear() {
 
 SingleLineResult::~SingleLineResult() {
     clear();
-    // if (pout != NULL) {
-    //     scw_destroy_out(pout);
-    //     pout = NULL;
-
-    // }
 }

@@ -26,7 +26,7 @@ Last modified: 2016-09-07 13:34:29
 #include <vector>
 #include <iostream>
 #include <unordered_map>
-#include "./3rd/include/Jieba.hpp"
+#include "../3rd/include/Jieba.hpp"
 
 /*RecogObj存储识别结果和处理后的分词结果*/
 typedef struct Recognition {
