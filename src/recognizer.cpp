@@ -4,18 +4,21 @@ Program: Normalization class cpp file
 Description: 
 Author: cshanbo@gmail.com
 Date: 2016-09-08 09:42:43
-Last modified: 2016-09-08 10:33:10
+Last modified: 2016-09-08 15:54:44
 **********************************************/
 
 #include <string>
-#include "../include/normalization.h"
+#include "../include/Recognizer.h"
 
-Normalization::Normalization() {}
+Recognizer::Recognizer() {
+    segmenter = NULL;
+}
 
-Normalization::Normalization(std::string DICT_PATH, std::string HMM_PATH, std::string USER_DICT_PATH) {
+Recognizer::Recognizer(std::string DICT_PATH, std::string HMM_PATH, std::string USER_DICT_PATH, std::string conf_dir, bool use_segment, bool use_classifier) {
     segmenter = new cppjieba::Jieba(DICT_PATH, HMM_PATH, USER_DICT_PATH);
 }
 
-Normalization::~Normalization() {
+Recognizer::~Recognizer() {
     delete segmenter;
 }
+

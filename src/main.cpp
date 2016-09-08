@@ -3,7 +3,7 @@
 Program: test
 Description: 
 Date: 2016-07-05 21:07:39
-Last modified: 2016-09-08 10:47:55
+Last modified: 2016-09-08 16:14:38
 GCC version: 4.7.3
 */
 
@@ -13,8 +13,8 @@ GCC version: 4.7.3
 #include <pcrecpp.h>
 
 #include "../include/util.h"
-#include "../include/normalization.h"
-#include "./3rd/include/Jieba.hpp"
+#include "../include/Recognizer.h"
+#include "../3rd/include/Jieba.hpp"
 
 using namespace std;
 
@@ -54,7 +54,7 @@ int main(int argc, char* argv[]) {
     const string USER_DICT_PATH = "./3rd/dict/user.dict.utf8";
 
     cppjieba::Jieba jieba(DICT_PATH, HMM_PATH, USER_DICT_PATH);
-    Normalization* norm = new Normalization(DICT_PATH, HMM_PATH, USER_DICT_PATH);
+    Recognizer* norm = new Recognizer(DICT_PATH, HMM_PATH, USER_DICT_PATH, root_dir, 1, 1);
     s = "小明硕士毕业于中国科学院计算所后在日本京都大学深造";
     std::vector<cppjieba::Word> jiebawords;
     norm->segmenter->CutForSearch(s, jiebawords, true);
