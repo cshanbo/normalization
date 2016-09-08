@@ -31,6 +31,7 @@ class DictTrie {
     WordWeightMedian,
     WordWeightMax,
   }; // enum UserWordWeightOption
+  DictTrie(){}
 
   DictTrie(const string& dict_path, const string& user_dict_paths = "", UserWordWeightOption user_word_weight_opt = WordWeightMedian) {
     Init(dict_path, user_dict_paths, user_word_weight_opt);

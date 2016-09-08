@@ -3,7 +3,7 @@
 !_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
-!_TAG_PROGRAM_VERSION	5.8	//
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 Add	3rd/include/limonp/ThreadPool.hpp	/^  void Add(ClosureInterface* task) {$/;"	f	class:limonp::ThreadPool
 ArgvContext	3rd/include/limonp/ArgvContext.hpp	/^  ArgvContext(int argc, const char* const * argv) {$/;"	f	class:limonp::ArgvContext
 ArgvContext	3rd/include/limonp/ArgvContext.hpp	/^class ArgvContext {$/;"	c	namespace:limonp
@@ -18,22 +18,22 @@ BoundedBlockingQueue	3rd/include/limonp/BoundedBlockingQueue.hpp	/^  explicit Bo
 BoundedBlockingQueue	3rd/include/limonp/BoundedBlockingQueue.hpp	/^class BoundedBlockingQueue : NonCopyable {$/;"	c	namespace:limonp
 BoundedQueue	3rd/include/limonp/BoundedQueue.hpp	/^  explicit BoundedQueue(size_t capacity): capacity_(capacity), circular_buffer_(capacity) {$/;"	f	class:limonp::BoundedQueue
 BoundedQueue	3rd/include/limonp/BoundedQueue.hpp	/^class BoundedQueue {$/;"	c	namespace:limonp
-CPPJIBEA_HMMSEGMENT_H	3rd/include/HMMSegment.hpp	/^#define CPPJIBEA_HMMSEGMENT_H$/;"	d
-CPPJIEAB_JIEBA_H	3rd/include/Jieba.hpp	/^#define CPPJIEAB_JIEBA_H$/;"	d
-CPPJIEBA_DICT_TRIE_HPP	3rd/include/DictTrie.hpp	/^#define CPPJIEBA_DICT_TRIE_HPP$/;"	d
-CPPJIEBA_FULLSEGMENT_H	3rd/include/FullSegment.hpp	/^#define CPPJIEBA_FULLSEGMENT_H$/;"	d
-CPPJIEBA_HMMMODEL_H	3rd/include/HMMModel.hpp	/^#define CPPJIEBA_HMMMODEL_H$/;"	d
-CPPJIEBA_KEYWORD_EXTRACTOR_H	3rd/include/KeywordExtractor.hpp	/^#define CPPJIEBA_KEYWORD_EXTRACTOR_H$/;"	d
-CPPJIEBA_MIXSEGMENT_H	3rd/include/MixSegment.hpp	/^#define CPPJIEBA_MIXSEGMENT_H$/;"	d
-CPPJIEBA_MPSEGMENT_H	3rd/include/MPSegment.hpp	/^#define CPPJIEBA_MPSEGMENT_H$/;"	d
-CPPJIEBA_POS_TAGGING_H	3rd/include/PosTagger.hpp	/^#define CPPJIEBA_POS_TAGGING_H$/;"	d
-CPPJIEBA_PRE_FILTER_H	3rd/include/PreFilter.hpp	/^#define CPPJIEBA_PRE_FILTER_H$/;"	d
-CPPJIEBA_QUERYSEGMENT_H	3rd/include/QuerySegment.hpp	/^#define CPPJIEBA_QUERYSEGMENT_H$/;"	d
-CPPJIEBA_SEGMENTBASE_H	3rd/include/SegmentBase.hpp	/^#define CPPJIEBA_SEGMENTBASE_H$/;"	d
-CPPJIEBA_SEGMENTTAGGED_H	3rd/include/SegmentTagged.hpp	/^#define CPPJIEBA_SEGMENTTAGGED_H$/;"	d
-CPPJIEBA_TEXTRANK_EXTRACTOR_H	3rd/include/TextRankExtractor.hpp	/^#define CPPJIEBA_TEXTRANK_EXTRACTOR_H$/;"	d
-CPPJIEBA_TRIE_HPP	3rd/include/Trie.hpp	/^#define CPPJIEBA_TRIE_HPP$/;"	d
-CPPJIEBA_UNICODE_H	3rd/include/Unicode.hpp	/^#define CPPJIEBA_UNICODE_H$/;"	d
+CPPJIBEA_HMMSEGMENT_H	3rd/include/HMMSegment.hpp	2;"	d
+CPPJIEAB_JIEBA_H	3rd/include/Jieba.hpp	2;"	d
+CPPJIEBA_DICT_TRIE_HPP	3rd/include/DictTrie.hpp	2;"	d
+CPPJIEBA_FULLSEGMENT_H	3rd/include/FullSegment.hpp	2;"	d
+CPPJIEBA_HMMMODEL_H	3rd/include/HMMModel.hpp	2;"	d
+CPPJIEBA_KEYWORD_EXTRACTOR_H	3rd/include/KeywordExtractor.hpp	2;"	d
+CPPJIEBA_MIXSEGMENT_H	3rd/include/MixSegment.hpp	2;"	d
+CPPJIEBA_MPSEGMENT_H	3rd/include/MPSegment.hpp	2;"	d
+CPPJIEBA_POS_TAGGING_H	3rd/include/PosTagger.hpp	2;"	d
+CPPJIEBA_PRE_FILTER_H	3rd/include/PreFilter.hpp	2;"	d
+CPPJIEBA_QUERYSEGMENT_H	3rd/include/QuerySegment.hpp	2;"	d
+CPPJIEBA_SEGMENTBASE_H	3rd/include/SegmentBase.hpp	2;"	d
+CPPJIEBA_SEGMENTTAGGED_H	3rd/include/SegmentTagged.hpp	2;"	d
+CPPJIEBA_TEXTRANK_EXTRACTOR_H	3rd/include/TextRankExtractor.hpp	2;"	d
+CPPJIEBA_TRIE_HPP	3rd/include/Trie.hpp	2;"	d
+CPPJIEBA_UNICODE_H	3rd/include/Unicode.hpp	2;"	d
 CXX	Makefile	/^CXX=g++$/;"	m
 CXXFLAGS	Makefile	/^CXXFLAGS = -g -std=c++11 -Wall -pedantic -I.$/;"	m
 CalcDP	3rd/include/MPSegment.hpp	/^  void CalcDP(vector<Dag>& dags) const {$/;"	f	class:cppjieba::MPSegment
@@ -100,6 +100,7 @@ DecodeRunesInString	3rd/include/Unicode.hpp	/^inline bool DecodeRunesInString(co
 DecodeRunesInString	3rd/include/Unicode.hpp	/^inline bool DecodeRunesInString(const string& s, RuneStrArray& runes) {$/;"	f	namespace:cppjieba
 DecodeRunesInString	3rd/include/Unicode.hpp	/^inline bool DecodeRunesInString(const string& s, Unicode& unicode) {$/;"	f	namespace:cppjieba
 DeleteNode	3rd/include/Trie.hpp	/^  void DeleteNode(TrieNode* node) {$/;"	f	class:cppjieba::Trie
+DictTrie	3rd/include/DictTrie.hpp	/^  DictTrie(){}$/;"	f	class:cppjieba::DictTrie
 DictTrie	3rd/include/DictTrie.hpp	/^  DictTrie(const string& dict_path, const string& user_dict_paths = "", UserWordWeightOption user_word_weight_opt = WordWeightMedian) {$/;"	f	class:cppjieba::DictTrie
 DictTrie	3rd/include/DictTrie.hpp	/^class DictTrie {$/;"	c	namespace:cppjieba
 DictUnit	3rd/include/Trie.hpp	/^struct DictUnit {$/;"	s	namespace:cppjieba
@@ -118,8 +119,8 @@ Extract	3rd/include/KeywordExtractor.hpp	/^  void Extract(const string& sentence
 Extract	3rd/include/TextRankExtractor.hpp	/^    void Extract(const string& sentence, vector<Word>& keywords, size_t topN, size_t span=5,size_t rankTime=10) const {$/;"	f	class:cppjieba::TextRankExtractor
 Extract	3rd/include/TextRankExtractor.hpp	/^    void Extract(const string& sentence, vector<pair<string, double> >& keywords, size_t topN) const {$/;"	f	class:cppjieba::TextRankExtractor
 Extract	3rd/include/TextRankExtractor.hpp	/^    void Extract(const string& sentence, vector<string>& keywords, size_t topN) const {$/;"	f	class:cppjieba::TextRankExtractor
-F	3rd/include/limonp/Md5.hpp	/^#define F(/;"	d
-FF	3rd/include/limonp/Md5.hpp	/^#define FF(/;"	d
+F	3rd/include/limonp/Md5.hpp	57;"	d
+FF	3rd/include/limonp/Md5.hpp	67;"	d
 FileLock	3rd/include/limonp/FileLock.hpp	/^  FileLock() : fd_(-1), ok_(true) {$/;"	f	class:limonp::FileLock
 FileLock	3rd/include/limonp/FileLock.hpp	/^class FileLock {$/;"	c	namespace:limonp
 Final	3rd/include/limonp/Md5.hpp	/^  void Final() {$/;"	f	class:limonp::MD5
@@ -132,11 +133,11 @@ Full	3rd/include/limonp/BoundedQueue.hpp	/^  bool Full() const {$/;"	f	class:lim
 FullSegment	3rd/include/FullSegment.hpp	/^  FullSegment(const DictTrie* dictTrie)$/;"	f	class:cppjieba::FullSegment
 FullSegment	3rd/include/FullSegment.hpp	/^  FullSegment(const string& dictPath) {$/;"	f	class:cppjieba::FullSegment
 FullSegment	3rd/include/FullSegment.hpp	/^class FullSegment: public SegmentBase {$/;"	c	namespace:cppjieba
-G	3rd/include/limonp/Md5.hpp	/^#define G(/;"	d
+G	3rd/include/limonp/Md5.hpp	58;"	d
 GBKTrans	3rd/include/limonp/StringUtil.hpp	/^bool GBKTrans(const char* const str, size_t len, Uint16Container& vec) {$/;"	f	namespace:limonp
 GBKTrans	3rd/include/limonp/StringUtil.hpp	/^bool GBKTrans(const string& str, Uint16Container& vec) {$/;"	f	namespace:limonp
 GBKTrans	3rd/include/limonp/StringUtil.hpp	/^void GBKTrans(Uint16ContainerConIter begin, Uint16ContainerConIter end, string& res) {$/;"	f	namespace:limonp
-GG	3rd/include/limonp/Md5.hpp	/^#define GG(/;"	d
+GG	3rd/include/limonp/Md5.hpp	72;"	d
 GREEN	3rd/include/limonp/Colors.hpp	/^  GREEN,$/;"	e	enum:limonp::Color
 Get	3rd/include/limonp/Config.hpp	/^  int Get(const string& key, int defaultvalue) const {$/;"	f	class:limonp::Config
 Get	3rd/include/limonp/Config.hpp	/^  string Get(const string& key, const string& defaultvalue) const {$/;"	f	class:limonp::Config
@@ -156,8 +157,8 @@ GetWordFromRunes	3rd/include/Unicode.hpp	/^inline Word GetWordFromRunes(const st
 GetWordsFromWordRanges	3rd/include/Unicode.hpp	/^inline vector<Word> GetWordsFromWordRanges(const string& s, const vector<WordRange>& wrs) {$/;"	f	namespace:cppjieba
 GetWordsFromWordRanges	3rd/include/Unicode.hpp	/^inline void GetWordsFromWordRanges(const string& s, const vector<WordRange>& wrs, vector<Word>& words) {$/;"	f	namespace:cppjieba
 Graph	3rd/include/TextRankExtractor.hpp	/^      typedef std::map<Node,Edges> Graph;$/;"	t	class:cppjieba::TextRankExtractor::WordGraph
-H	3rd/include/limonp/Md5.hpp	/^#define H(/;"	d
-HH	3rd/include/limonp/Md5.hpp	/^#define HH(/;"	d
+H	3rd/include/limonp/Md5.hpp	59;"	d
+HH	3rd/include/limonp/Md5.hpp	77;"	d
 HMMModel	3rd/include/HMMModel.hpp	/^  HMMModel(const string& modelPath) {$/;"	f	struct:cppjieba::HMMModel
 HMMModel	3rd/include/HMMModel.hpp	/^struct HMMModel {$/;"	s	namespace:cppjieba
 HMMSegment	3rd/include/HMMSegment.hpp	/^  HMMSegment(const HMMModel* model) $/;"	f	class:cppjieba::HMMSegment
@@ -166,9 +167,9 @@ HMMSegment	3rd/include/HMMSegment.hpp	/^class HMMSegment: public SegmentBase {$/
 HMM_PATH	3rd/demo.cpp	/^const char* const HMM_PATH = ".\/dict\/hmm_model.utf8";$/;"	v
 HasKey	3rd/include/limonp/ArgvContext.hpp	/^  bool HasKey(const string& key) const {$/;"	f	class:limonp::ArgvContext
 HasNext	3rd/include/PreFilter.hpp	/^  bool HasNext() const {$/;"	f	class:cppjieba::PreFilter
-I	3rd/include/limonp/Md5.hpp	/^#define I(/;"	d
+I	3rd/include/limonp/Md5.hpp	60;"	d
 IDF_PATH	3rd/demo.cpp	/^const char* const IDF_PATH = ".\/dict\/idf.utf8";$/;"	v
-II	3rd/include/limonp/Md5.hpp	/^#define II(/;"	d
+II	3rd/include/limonp/Md5.hpp	82;"	d
 INC_DIR	Makefile	/^INC_DIR = include$/;"	m
 IThread	3rd/include/limonp/Thread.hpp	/^  IThread(): isStarted(false), isJoined(false) {$/;"	f	class:limonp::IThread
 IThread	3rd/include/limonp/Thread.hpp	/^class IThread: NonCopyable {$/;"	c	namespace:limonp
@@ -186,6 +187,7 @@ IsSingleWord	3rd/include/Unicode.hpp	/^inline bool IsSingleWord(const string& st
 IsSpace	3rd/include/limonp/StringUtil.hpp	/^inline bool IsSpace(unsigned c) {$/;"	f	namespace:limonp
 IsUserDictSingleChineseWord	3rd/include/DictTrie.hpp	/^  bool IsUserDictSingleChineseWord(const Rune& word) const {$/;"	f	class:cppjieba::DictTrie
 IsUserDictSingleChineseWord	3rd/include/MPSegment.hpp	/^  bool IsUserDictSingleChineseWord(const Rune& value) const {$/;"	f	class:cppjieba::MPSegment
+Jieba	3rd/include/Jieba.hpp	/^     Jieba(): Jieba("", "", "") {}$/;"	f	class:cppjieba::Jieba
 Jieba	3rd/include/Jieba.hpp	/^  Jieba(const string& dict_path, const string& model_path, const string& user_dict_path) $/;"	f	class:cppjieba::Jieba
 Jieba	3rd/include/Jieba.hpp	/^class Jieba {$/;"	c	namespace:cppjieba
 Join	3rd/include/limonp/StringUtil.hpp	/^string Join(T begin, T end, const string& connector) {$/;"	f	namespace:limonp
@@ -195,24 +197,24 @@ KeywordExtractor	3rd/include/KeywordExtractor.hpp	/^  KeywordExtractor(const Dic
 KeywordExtractor	3rd/include/KeywordExtractor.hpp	/^  KeywordExtractor(const Jieba& jieba, $/;"	f	class:cppjieba::KeywordExtractor
 KeywordExtractor	3rd/include/KeywordExtractor.hpp	/^  KeywordExtractor(const string& dictPath, $/;"	f	class:cppjieba::KeywordExtractor
 KeywordExtractor	3rd/include/KeywordExtractor.hpp	/^class KeywordExtractor {$/;"	c	namespace:cppjieba
-LIMONP_ARGV_FUNCTS_H	3rd/include/limonp/ArgvContext.hpp	/^#define LIMONP_ARGV_FUNCTS_H$/;"	d
-LIMONP_BLOCKINGQUEUE_HPP	3rd/include/limonp/BlockingQueue.hpp	/^#define LIMONP_BLOCKINGQUEUE_HPP$/;"	d
-LIMONP_BOUNDED_BLOCKING_QUEUE_HPP	3rd/include/limonp/BoundedBlockingQueue.hpp	/^#define LIMONP_BOUNDED_BLOCKING_QUEUE_HPP$/;"	d
-LIMONP_BOUNDED_QUEUE_HPP	3rd/include/limonp/BoundedQueue.hpp	/^#define LIMONP_BOUNDED_QUEUE_HPP$/;"	d
-LIMONP_CLOSURE_HPP	3rd/include/limonp/Closure.hpp	/^#define LIMONP_CLOSURE_HPP$/;"	d
-LIMONP_COLOR_PRINT_HPP	3rd/include/limonp/Colors.hpp	/^#define LIMONP_COLOR_PRINT_HPP$/;"	d
-LIMONP_CONDITION_HPP	3rd/include/limonp/Condition.hpp	/^#define LIMONP_CONDITION_HPP$/;"	d
-LIMONP_CONFIG_H	3rd/include/limonp/Config.hpp	/^#define LIMONP_CONFIG_H$/;"	d
-LIMONP_FILELOCK_HPP	3rd/include/limonp/FileLock.hpp	/^#define LIMONP_FILELOCK_HPP$/;"	d
-LIMONP_FORCE_PUBLIC_H	3rd/include/limonp/ForcePublic.hpp	/^#define LIMONP_FORCE_PUBLIC_H$/;"	d
-LIMONP_LOCAL_VECTOR_HPP	3rd/include/limonp/LocalVector.hpp	/^#define LIMONP_LOCAL_VECTOR_HPP$/;"	d
-LIMONP_LOGGING_HPP	3rd/include/limonp/Logging.hpp	/^#define LIMONP_LOGGING_HPP$/;"	d
-LIMONP_MUTEX_LOCK_HPP	3rd/include/limonp/MutexLock.hpp	/^#define LIMONP_MUTEX_LOCK_HPP$/;"	d
-LIMONP_NONCOPYABLE_H	3rd/include/limonp/NonCopyable.hpp	/^#define LIMONP_NONCOPYABLE_H$/;"	d
-LIMONP_STD_EXTEMSION_HPP	3rd/include/limonp/StdExtension.hpp	/^#define LIMONP_STD_EXTEMSION_HPP$/;"	d
-LIMONP_STR_FUNCTS_H	3rd/include/limonp/StringUtil.hpp	/^#define LIMONP_STR_FUNCTS_H$/;"	d
-LIMONP_THREAD_HPP	3rd/include/limonp/Thread.hpp	/^#define LIMONP_THREAD_HPP$/;"	d
-LIMONP_THREAD_POOL_HPP	3rd/include/limonp/ThreadPool.hpp	/^#define LIMONP_THREAD_POOL_HPP$/;"	d
+LIMONP_ARGV_FUNCTS_H	3rd/include/limonp/ArgvContext.hpp	7;"	d
+LIMONP_BLOCKINGQUEUE_HPP	3rd/include/limonp/BlockingQueue.hpp	2;"	d
+LIMONP_BOUNDED_BLOCKING_QUEUE_HPP	3rd/include/limonp/BoundedBlockingQueue.hpp	2;"	d
+LIMONP_BOUNDED_QUEUE_HPP	3rd/include/limonp/BoundedQueue.hpp	2;"	d
+LIMONP_CLOSURE_HPP	3rd/include/limonp/Closure.hpp	2;"	d
+LIMONP_COLOR_PRINT_HPP	3rd/include/limonp/Colors.hpp	2;"	d
+LIMONP_CONDITION_HPP	3rd/include/limonp/Condition.hpp	2;"	d
+LIMONP_CONFIG_H	3rd/include/limonp/Config.hpp	6;"	d
+LIMONP_FILELOCK_HPP	3rd/include/limonp/FileLock.hpp	2;"	d
+LIMONP_FORCE_PUBLIC_H	3rd/include/limonp/ForcePublic.hpp	2;"	d
+LIMONP_LOCAL_VECTOR_HPP	3rd/include/limonp/LocalVector.hpp	2;"	d
+LIMONP_LOGGING_HPP	3rd/include/limonp/Logging.hpp	2;"	d
+LIMONP_MUTEX_LOCK_HPP	3rd/include/limonp/MutexLock.hpp	2;"	d
+LIMONP_NONCOPYABLE_H	3rd/include/limonp/NonCopyable.hpp	4;"	d
+LIMONP_STD_EXTEMSION_HPP	3rd/include/limonp/StdExtension.hpp	2;"	d
+LIMONP_STR_FUNCTS_H	3rd/include/limonp/StringUtil.hpp	6;"	d
+LIMONP_THREAD_HPP	3rd/include/limonp/Thread.hpp	2;"	d
+LIMONP_THREAD_POOL_HPP	3rd/include/limonp/ThreadPool.hpp	2;"	d
 LL_DEBUG	3rd/include/limonp/Logging.hpp	/^  LL_DEBUG = 0, $/;"	e	enum:limonp::__anon2
 LL_ERROR	3rd/include/limonp/Logging.hpp	/^  LL_ERROR = 3, $/;"	e	enum:limonp::__anon2
 LL_FATAL	3rd/include/limonp/Logging.hpp	/^  LL_FATAL = 4,$/;"	e	enum:limonp::__anon2
@@ -249,7 +251,7 @@ LookupTag	3rd/include/PosTagger.hpp	/^  string LookupTag(const string &str, cons
 Lower	3rd/include/limonp/StringUtil.hpp	/^inline string& Lower(string& str) {$/;"	f	namespace:limonp
 M	3rd/include/HMMModel.hpp	/^  enum {B = 0, E = 1, M = 2, S = 3, STATUS_SUM = 4};$/;"	e	enum:cppjieba::HMMModel::__anon1
 MAX_DOUBLE	3rd/include/DictTrie.hpp	/^const double MAX_DOUBLE = 3.14e+100;$/;"	m	namespace:cppjieba
-MAX_TERM_COUNT	include/parameters.h	/^#define MAX_TERM_COUNT /;"	d
+MAX_TERM_COUNT	include/parameters.h	22;"	d
 MAX_WORD_LENGTH	3rd/include/Trie.hpp	/^const size_t MAX_WORD_LENGTH = 512;$/;"	m	namespace:cppjieba
 MD5	3rd/include/limonp/Md5.hpp	/^  MD5() {$/;"	f	class:limonp::MD5
 MD5	3rd/include/limonp/Md5.hpp	/^class MD5 {$/;"	c	namespace:limonp
@@ -265,8 +267,8 @@ MixSegment	3rd/include/MixSegment.hpp	/^class MixSegment: public SegmentTagged {
 MutexLock	3rd/include/limonp/MutexLock.hpp	/^  MutexLock() {$/;"	f	class:limonp::MutexLock
 MutexLock	3rd/include/limonp/MutexLock.hpp	/^class MutexLock: NonCopyable {$/;"	c	namespace:limonp
 MutexLockGuard	3rd/include/limonp/MutexLock.hpp	/^  explicit MutexLockGuard(MutexLock & mutex)$/;"	f	class:limonp::MutexLockGuard
-MutexLockGuard	3rd/include/limonp/MutexLock.hpp	/^#define MutexLockGuard(/;"	d
 MutexLockGuard	3rd/include/limonp/MutexLock.hpp	/^class MutexLockGuard: NonCopyable {$/;"	c	namespace:limonp
+MutexLockGuard	3rd/include/limonp/MutexLock.hpp	47;"	d
 NewClosure	3rd/include/limonp/Closure.hpp	/^ClosureInterface* NewClosure(Obj* obj, R (Obj::* fun)()) {$/;"	f	namespace:limonp
 NewClosure	3rd/include/limonp/Closure.hpp	/^ClosureInterface* NewClosure(Obj* obj, R (Obj::* fun)(Arg1), Arg1 arg1) {$/;"	f	namespace:limonp
 NewClosure	3rd/include/limonp/Closure.hpp	/^ClosureInterface* NewClosure(Obj* obj, R (Obj::* fun)(Arg1, Arg2), Arg1 arg1, Arg2 arg2) {$/;"	f	namespace:limonp
@@ -281,11 +283,14 @@ Node	3rd/include/TextRankExtractor.hpp	/^      typedef string Node;$/;"	t	class:
 NodeSet	3rd/include/TextRankExtractor.hpp	/^      typedef std::set<Node> NodeSet;$/;"	t	class:cppjieba::TextRankExtractor::WordGraph
 NonCopyable	3rd/include/limonp/NonCopyable.hpp	/^  NonCopyable() {$/;"	f	class:limonp::NonCopyable
 NonCopyable	3rd/include/limonp/NonCopyable.hpp	/^class NonCopyable {$/;"	c	namespace:limonp
+Normalization	include/normalization.h	/^class Normalization {$/;"	c
+Normalization	src/normalization.cpp	/^Normalization::Normalization() {}$/;"	f	class:Normalization
+Normalization	src/normalization.cpp	/^Normalization::Normalization(std::string DICT_PATH, std::string HMM_PATH, std::string USER_DICT_PATH) {$/;"	f	class:Normalization
 Notify	3rd/include/limonp/Condition.hpp	/^  void Notify() {$/;"	f	class:limonp::Condition
 NotifyAll	3rd/include/limonp/Condition.hpp	/^  void NotifyAll() {$/;"	f	class:limonp::Condition
 NumbersRule	3rd/include/HMMSegment.hpp	/^  RuneStrArray::const_iterator NumbersRule(RuneStrArray::const_iterator begin, RuneStrArray::const_iterator end) const {$/;"	f	class:cppjieba::HMMSegment
 OBJ_DIR	Makefile	/^OBJ_DIR = obj$/;"	m
-OVECTOR_SIZE	include/parameters.h	/^#define OVECTOR_SIZE /;"	d
+OVECTOR_SIZE	include/parameters.h	14;"	d
 ObjClosure0	3rd/include/limonp/Closure.hpp	/^  ObjClosure0(Obj* p, Funct fun) {$/;"	f	class:limonp::ObjClosure0
 ObjClosure0	3rd/include/limonp/Closure.hpp	/^class ObjClosure0: public ClosureInterface {$/;"	c	namespace:limonp
 ObjClosure1	3rd/include/limonp/Closure.hpp	/^  ObjClosure1(Obj* p, Funct fun, Arg1 arg1) {$/;"	f	class:limonp::ObjClosure1
@@ -317,8 +322,8 @@ QuerySegment	3rd/include/QuerySegment.hpp	/^  QuerySegment(const DictTrie* dictT
 QuerySegment	3rd/include/QuerySegment.hpp	/^  QuerySegment(const string& dict, const string& model, const string& userDict = "")$/;"	f	class:cppjieba::QuerySegment
 QuerySegment	3rd/include/QuerySegment.hpp	/^class QuerySegment: public SegmentBase {$/;"	c	namespace:cppjieba
 RED	3rd/include/limonp/Colors.hpp	/^  RED,$/;"	e	enum:limonp::Color
-REGEX_RULE_COUNT	include/parameters.h	/^#define REGEX_RULE_COUNT /;"	d
-ROTATE_LEFT	3rd/include/limonp/Md5.hpp	/^#define ROTATE_LEFT(/;"	d
+REGEX_RULE_COUNT	include/parameters.h	18;"	d
+ROTATE_LEFT	3rd/include/limonp/Md5.hpp	63;"	d
 RTrim	3rd/include/limonp/StringUtil.hpp	/^inline std::string& RTrim(std::string & s, char x) {$/;"	f	namespace:limonp
 RTrim	3rd/include/limonp/StringUtil.hpp	/^inline std::string& RTrim(std::string &s) {$/;"	f	namespace:limonp
 Range	3rd/include/PreFilter.hpp	/^  struct Range {$/;"	s	class:cppjieba::PreFilter
@@ -344,22 +349,22 @@ RuneStrLite	3rd/include/Unicode.hpp	/^  RuneStrLite(): rune(0), len(0) {$/;"	f	s
 RuneStrLite	3rd/include/Unicode.hpp	/^  RuneStrLite(uint32_t r, uint32_t l): rune(r), len(l) {$/;"	f	struct:cppjieba::RuneStrLite
 RuneStrLite	3rd/include/Unicode.hpp	/^struct RuneStrLite {$/;"	s	namespace:cppjieba
 S	3rd/include/HMMModel.hpp	/^  enum {B = 0, E = 1, M = 2, S = 3, STATUS_SUM = 4};$/;"	e	enum:cppjieba::HMMModel::__anon1
-S11	3rd/include/limonp/Md5.hpp	/^#define S11 /;"	d
-S12	3rd/include/limonp/Md5.hpp	/^#define S12 /;"	d
-S13	3rd/include/limonp/Md5.hpp	/^#define S13 /;"	d
-S14	3rd/include/limonp/Md5.hpp	/^#define S14 /;"	d
-S21	3rd/include/limonp/Md5.hpp	/^#define S21 /;"	d
-S22	3rd/include/limonp/Md5.hpp	/^#define S22 /;"	d
-S23	3rd/include/limonp/Md5.hpp	/^#define S23 /;"	d
-S24	3rd/include/limonp/Md5.hpp	/^#define S24 /;"	d
-S31	3rd/include/limonp/Md5.hpp	/^#define S31 /;"	d
-S32	3rd/include/limonp/Md5.hpp	/^#define S32 /;"	d
-S33	3rd/include/limonp/Md5.hpp	/^#define S33 /;"	d
-S34	3rd/include/limonp/Md5.hpp	/^#define S34 /;"	d
-S41	3rd/include/limonp/Md5.hpp	/^#define S41 /;"	d
-S42	3rd/include/limonp/Md5.hpp	/^#define S42 /;"	d
-S43	3rd/include/limonp/Md5.hpp	/^#define S43 /;"	d
-S44	3rd/include/limonp/Md5.hpp	/^#define S44 /;"	d
+S11	3rd/include/limonp/Md5.hpp	38;"	d
+S12	3rd/include/limonp/Md5.hpp	39;"	d
+S13	3rd/include/limonp/Md5.hpp	40;"	d
+S14	3rd/include/limonp/Md5.hpp	41;"	d
+S21	3rd/include/limonp/Md5.hpp	42;"	d
+S22	3rd/include/limonp/Md5.hpp	43;"	d
+S23	3rd/include/limonp/Md5.hpp	44;"	d
+S24	3rd/include/limonp/Md5.hpp	45;"	d
+S31	3rd/include/limonp/Md5.hpp	46;"	d
+S32	3rd/include/limonp/Md5.hpp	47;"	d
+S33	3rd/include/limonp/Md5.hpp	48;"	d
+S34	3rd/include/limonp/Md5.hpp	49;"	d
+S41	3rd/include/limonp/Md5.hpp	50;"	d
+S42	3rd/include/limonp/Md5.hpp	51;"	d
+S43	3rd/include/limonp/Md5.hpp	52;"	d
+S44	3rd/include/limonp/Md5.hpp	53;"	d
 SPECIAL_SEPARATORS	3rd/include/SegmentBase.hpp	/^const char* const SPECIAL_SEPARATORS = " \\t\\n\\xEF\\xBC\\x8C\\xE3\\x80\\x82";$/;"	m	namespace:cppjieba
 SRC_DIR	Makefile	/^SRC_DIR = src$/;"	m
 STATUS_SUM	3rd/include/HMMModel.hpp	/^  enum {B = 0, E = 1, M = 2, S = 3, STATUS_SUM = 4};$/;"	e	enum:cppjieba::HMMModel::__anon1
@@ -438,13 +443,14 @@ WordWeightMin	3rd/include/DictTrie.hpp	/^    WordWeightMin,$/;"	e	enum:cppjieba:
 Worker	3rd/include/limonp/Thread.hpp	/^  static void * Worker(void * data) {$/;"	f	class:limonp::IThread
 Worker	3rd/include/limonp/ThreadPool.hpp	/^    Worker(ThreadPool* pool): ptThreadPool_(pool) {$/;"	f	class:limonp::ThreadPool::Worker
 Worker	3rd/include/limonp/ThreadPool.hpp	/^  class Worker: public IThread {$/;"	c	class:limonp::ThreadPool
-XCHECK	3rd/include/limonp/Logging.hpp	/^#define XCHECK(/;"	d
-XLOG	3rd/include/limonp/Logging.hpp	/^#define XLOG(/;"	d
+XCHECK	3rd/include/limonp/Logging.hpp	18;"	d
+XLOG	3rd/include/limonp/Logging.hpp	17;"	d
 YELLOW	3rd/include/limonp/Colors.hpp	/^  YELLOW,$/;"	e	enum:limonp::Color
-_PARAMETER_H_	include/parameters.h	/^#define _PARAMETER_H_$/;"	d
-_UTIL_H_	include/util.h	/^#define _UTIL_H_$/;"	d
+_NORMALIZATION_H_	include/normalization.h	12;"	d
+_PARAMETER_H_	include/parameters.h	11;"	d
+_UTIL_H_	include/util.h	12;"	d
 _Word	3rd/include/TextRankExtractor.hpp	/^    typedef struct _Word {string word;vector<size_t> offsets;double weight;}    Word; \/\/ struct Word$/;"	s	class:cppjieba::TextRankExtractor
-__MD5_H__	3rd/include/limonp/Md5.hpp	/^#define __MD5_H__$/;"	d
+__MD5_H__	3rd/include/limonp/Md5.hpp	2;"	d
 __context_t	3rd/include/limonp/Md5.hpp	/^  struct __context_t {$/;"	s	class:limonp::MD5
 active_node_infos_	3rd/include/DictTrie.hpp	/^  deque<DictUnit> active_node_infos_; \/\/ must not be vector$/;"	m	class:cppjieba::DictTrie
 addEdge	3rd/include/TextRankExtractor.hpp	/^      void addEdge(Node start,Node end,double weight){$/;"	f	class:cppjieba::TextRankExtractor::WordGraph
@@ -629,10 +635,10 @@ p_	3rd/include/limonp/Closure.hpp	/^  Obj* p_;$/;"	m	class:limonp::ObjClosure3
 pcond_	3rd/include/limonp/Condition.hpp	/^  pthread_cond_t pcond_;$/;"	m	class:limonp::Condition
 pos	include/parameters.h	/^    std::string pos;        \/\/postag未用$/;"	m	struct:Recognition
 pout	include/parameters.h	/^    std::vector<cppjieba::Word> pout;$/;"	m	struct:SingleLineResult
-print	3rd/include/limonp/StdExtension.hpp	/^#define print(/;"	d
+print	3rd/include/limonp/StdExtension.hpp	32;"	d
 priority	include/parameters.h	/^    int priority;       \/\/优先级$/;"	m	struct:Recognition
-private	3rd/include/limonp/ForcePublic.hpp	/^#define private /;"	d
-protected	3rd/include/limonp/ForcePublic.hpp	/^#define protected /;"	d
+private	3rd/include/limonp/ForcePublic.hpp	4;"	d
+protected	3rd/include/limonp/ForcePublic.hpp	5;"	d
 ptThreadPool_	3rd/include/limonp/ThreadPool.hpp	/^    ThreadPool * ptThreadPool_;$/;"	m	class:limonp::ThreadPool::Worker
 ptValue	3rd/include/Trie.hpp	/^  const DictUnit *ptValue;$/;"	m	class:cppjieba::TrieNode
 ptr_	3rd/include/limonp/LocalVector.hpp	/^  T * ptr_;$/;"	m	class:limonp::LocalVector
@@ -654,6 +660,7 @@ runestr	3rd/include/Trie.hpp	/^  RuneStr runestr;$/;"	m	struct:cppjieba::Dag
 seg_words	src/util.cpp	/^int seg_words(SingleLineResult& slr, cppjieba::Jieba& segmenter) {$/;"	f
 segment_	3rd/include/KeywordExtractor.hpp	/^  MixSegment segment_;$/;"	m	class:cppjieba::KeywordExtractor
 segment_	3rd/include/TextRankExtractor.hpp	/^    MixSegment segment_;$/;"	m	class:cppjieba::TextRankExtractor
+segmenter	include/normalization.h	/^    cppjieba::Jieba segmenter;$/;"	m	class:Normalization
 sentence_	3rd/include/PreFilter.hpp	/^  RuneStrArray sentence_;$/;"	m	class:cppjieba::PreFilter
 show_usage	src/main.cpp	/^int show_usage() {$/;"	f
 size	3rd/include/limonp/BoundedBlockingQueue.hpp	/^  size_t size() const {$/;"	f	class:limonp::BoundedBlockingQueue
@@ -724,6 +731,7 @@ writeToString	3rd/include/limonp/Md5.hpp	/^  void writeToString() {$/;"	f	class:
 ~MutexLock	3rd/include/limonp/MutexLock.hpp	/^  ~MutexLock() {$/;"	f	class:limonp::MutexLock
 ~MutexLockGuard	3rd/include/limonp/MutexLock.hpp	/^  ~MutexLockGuard() {$/;"	f	class:limonp::MutexLockGuard
 ~NonCopyable	3rd/include/limonp/NonCopyable.hpp	/^  ~NonCopyable() {$/;"	f	class:limonp::NonCopyable
+~Normalization	src/normalization.cpp	/^Normalization::~Normalization() {}$/;"	f	class:Normalization
 ~ObjClosure0	3rd/include/limonp/Closure.hpp	/^  virtual ~ObjClosure0() {$/;"	f	class:limonp::ObjClosure0
 ~ObjClosure1	3rd/include/limonp/Closure.hpp	/^  virtual ~ObjClosure1() {$/;"	f	class:limonp::ObjClosure1
 ~ObjClosure2	3rd/include/limonp/Closure.hpp	/^  virtual ~ObjClosure2() {$/;"	f	class:limonp::ObjClosure2

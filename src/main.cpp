@@ -3,7 +3,7 @@
 Program: test
 Description: 
 Date: 2016-07-05 21:07:39
-Last modified: 2016-09-07 15:09:01
+Last modified: 2016-09-08 10:38:09
 GCC version: 4.7.3
 */
 
@@ -13,6 +13,7 @@ GCC version: 4.7.3
 #include <pcrecpp.h>
 
 #include "../include/util.h"
+#include "../include/normalization.h"
 #include "./3rd/include/Jieba.hpp"
 
 using namespace std;
@@ -48,20 +49,18 @@ int main(int argc, char* argv[]) {
     std::cout << s << " : " << i << std::endl;
 
 
-    const char* const DICT_PATH = "./3rd/dict/jieba.dict.utf8";
-    const char* const HMM_PATH = "./3rd/dict/hmm_model.utf8";
-    const char* const USER_DICT_PATH = "./3rd/dict/user.dict.utf8";
-    const char* const IDF_PATH = "./3rd/dict/idf.utf8";
-    const char* const STOP_WORD_PATH = "./3rd/dict/stop_words.utf8";
-    cppjieba::Jieba jieba(DICT_PATH, 
-            HMM_PATH, 
-            USER_DICT_PATH);
-    vector<string> words;
-    vector<cppjieba::Word> jiebawords;
-    string result;
+    const string DICT_PATH = "./3rd/dict/jieba.dict.utf8";
+    const string HMM_PATH = "./3rd/dict/hmm_model.utf8";
+    const string USER_DICT_PATH = "./3rd/dict/user.dict.utf8";
 
+    cppjieba::Jieba jieba(DICT_PATH, HMM_PATH, USER_DICT_PATH);
+    Normalization* norm = new Normalization(DICT_PATH, HMM_PATH, USER_DICT_PATH);
     s = "小明硕士毕业于中国科学院计算所后在日本京都大学深造";
-    cout << "[demo] CutForSearch Word With Offset" << endl;
-    jieba.CutForSearch(s, jiebawords, true);
-    cout << jiebawords << endl;
+    std::vector<cppjieba::Word> jiebawords;
+    norm->segmenter->CutForSearch(s, jiebawords, true);
+    // jieba.CutForSearch(s, jiebawords, true);
+    cout << s << endl;
+    for(auto jbwd: jiebawords) {
+        cout << jbwd.word << '\t' << jbwd.offset << "-" << jbwd.offset + jbwd.word.length() << endl;
+    }
 }
