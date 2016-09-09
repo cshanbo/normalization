@@ -4,12 +4,13 @@ Program: util.cpp basic functions
 Description: 
 Shanbo Cheng: cshanbo@gmail.com
 Date: 2016-07-05 20:46:23
-Last modified: 2016-09-07 19:28:41
+Last modified: 2016-09-09 15:50:11
 GCC version: 4.7.3
 */
 
-#include "../include/util.h"
 #include <string>
+
+#include "../include/util.h"
 
 using namespace std;
 
@@ -39,7 +40,7 @@ string &trim(string &line) {
     return line;
 }
 
-void string_replace(string &origin, const string &src, const string &tgt) {
+void stringReplace(string &origin, const string &src, const string &tgt) {
     string::size_type pos = 0, srclen = src.size(),  dstlen = tgt.size();
     while((pos = origin.find(src, pos)) != string::npos) {
         origin.replace(pos, srclen, tgt);
@@ -47,11 +48,11 @@ void string_replace(string &origin, const string &src, const string &tgt) {
     }
 }
 
-int seg_words(SingleLineResult& slr, cppjieba::Jieba& segmenter) {
+int segWords(SingleLineResult& slr, cppjieba::Jieba& segmenter) {
     // if(slr.pout.empty())
     //     return 0;
-    char *line = const_cast<char *>(slr.current_line.c_str());
-    int len = strlen(line);
+    // char *line = const_cast<char *>(slr.current_line.c_str());
+    int len = slr.current_line.length();
 
     const char MAX_TERM_LENGTH = 50;
     char word[MAX_TERM_LENGTH];
@@ -92,4 +93,43 @@ int seg_words(SingleLineResult& slr, cppjieba::Jieba& segmenter) {
     //     }
     // }
     return 0;
+}
+
+int getContext(RecogObj &ro, SingleLineResult &slr) {
+    assert (slr.index_map.find(ro.span[0]) != slr.index_map.end());
+    assert (slr.index_map.find(ro.span[1]) != slr.index_map.end());
+    int start_index = slr.index_map[ro.span[0]] - 1;
+    int end_index = slr.index_map[ro.span[1]];
+    if (start_index < 0)
+        start_index = 0;
+    if (end_index > slr.unicode_string_list.size())
+        end_index = slr.unicode_string_list.size();
+    int i = 0;
+    while (start_index > 0) {
+        if (splitterJudge(slr.unicode_string_list[start_index]) || i == CONTEXT_WINDOW) {
+            ++start_index;
+            break;
+        }
+        --start_index;
+        ++i;
+    }
+    i = 0;
+    while (end_index < slr.unicode_string_list.size()) {
+        if (splitterJudge(slr.unicode_string_list[end_index]) || i == CONTEXT_WINDOW)
+            break;
+        ++end_index;
+        ++i;
+    }
+    start_index = slr.reversed_index_map[start_index];
+    end_index = slr.reversed_index_map[end_index];
+    ro.context = slr.current_line.substr(start_index, end_index - start_index);
+    ro.context_span[0] = start_index;
+    ro.context_span[1] = end_index;
+    return 0;
+}
+
+bool splitterJudge(std::string str) {
+    if (str == "," or str == "，" or str == "。")
+        return true;
+    return false;
 }

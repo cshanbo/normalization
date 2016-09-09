@@ -16,8 +16,10 @@ Last modified: 2016-09-08 09:25:22
 #include <iostream>
 
 #include "parameters.h"
+
 #include "util.h"
 #include "../3rd/include/Jieba.hpp"
+#include "regularRule.h"
 
 class Recognizer {
 public:
@@ -26,6 +28,7 @@ public:
 
     Recognizer(std::string, std::string, std::string, std::string, bool, bool); // first 3 parameters are to initialize the word segmenter. Could be written in hard codes
 
+    RegularRule* _rule_list;
     int readRegexRules(std::string conf_file) {
         std::ifstream ifs(conf_file.c_str(), std::ios::in); 
         if (!ifs) {
@@ -43,7 +46,7 @@ public:
                     continue;
                 trim(input_line);
                 this->_rule_list[i].analysis(input_line);
-                this->_rule_list[i].set_index(i);
+                this->_rule_list[i].setIndex(i);
                 ++i;
             }
         }

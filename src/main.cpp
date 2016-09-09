@@ -3,7 +3,7 @@
 Program: test
 Description: 
 Date: 2016-07-05 21:07:39
-Last modified: 2016-09-08 16:14:38
+Last modified: 2016-09-09 14:14:50
 GCC version: 4.7.3
 */
 
@@ -13,7 +13,7 @@ GCC version: 4.7.3
 #include <pcrecpp.h>
 
 #include "../include/util.h"
-#include "../include/Recognizer.h"
+#include "../include/recognizer.h"
 #include "../3rd/include/Jieba.hpp"
 
 using namespace std;

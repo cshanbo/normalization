@@ -9,17 +9,18 @@ GCC version: 4.9.3
 ***********************************************************/
 
 
-#ifndef _REGEX_RULE_H
-#define _REGEX_RULE_H
+#ifndef _REGULAR_RULE_H
+#define _REGULAR_RULE_H
 
 #include <string>
 #include <vector>
-#include <pcrecpp.h>
 
+#include "pcre.h"
 #include "parameters.h"
 
 class RegularRule {
-    pcrecpp::RE* _re;
+    pcre* _re;
+    int _index;
 public:
     RegularRule();
     ~RegularRule();
@@ -30,8 +31,8 @@ public:
 
     int _priority;
     int _confidence;
-    int analysis(const string&);
-    int analysisPattern(const string);
+    int analysis(const std::string&);
+    int analysisPattern(const std::string);
     int recog(SingleLineResult&, std::vector<RecogObj>&);
     int recogOnce(SingleLineResult&, int);  //int is used as offset
     int setIndex(int);

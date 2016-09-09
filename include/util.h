@@ -23,8 +23,12 @@ void split(const string &src, const string &separator, vector<string> &dest_list
 
 string &trim(string &line);
 
-void string_replace(string &origin, const string &src, const string &tgt);
+void stringReplace(string &origin, const string &src, const string &tgt);
 
-int seg_words(SingleLineResult&, cppjieba::Jieba&);
+int segWords(SingleLineResult&, cppjieba::Jieba&);
+
+int getContext(RecogObj&, SingleLineResult&);
+
+bool splitterJudge(std::string str);
 
 #endif

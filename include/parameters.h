@@ -22,6 +22,10 @@ Last modified: 2016-09-07 13:34:29
 #define MAX_TERM_COUNT 40960
 #endif
 
+#ifndef CONTEXT_WINDOW
+#define CONTEXT_WINDOW 15
+#endif
+
 #include <string>
 #include <vector>
 #include <iostream>

@@ -4,11 +4,11 @@ Program: Normalization class cpp file
 Description: 
 Author: cshanbo@gmail.com
 Date: 2016-09-08 09:42:43
-Last modified: 2016-09-08 15:54:44
+Last modified: 2016-09-09 15:55:30
 **********************************************/
 
 #include <string>
-#include "../include/Recognizer.h"
+#include "../include/recognizer.h"
 
 Recognizer::Recognizer() {
     segmenter = NULL;
