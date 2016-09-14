@@ -4,7 +4,7 @@ Program: Regular expression rules cpp
 Description: 
 Shanbo Cheng: cshanbo@gmail.com
 Date: 2016-09-08 16:20:03
-Last modified: 2016-09-09 15:33:10
+Last modified: 2016-09-09 19:53:13
 GCC version: 4.9.3
 ***********************************************************/
 
@@ -85,7 +85,7 @@ int RegularRule::recog(SingleLineResult &slr, std::vector<RecogObj> &tmp_result_
             ro.span[1] = ovector[1];
 
             ro.confidence = slr.index_map[ovector[1]] - slr.index_map[ovector[0]];
-            get_context(ro, slr);       //获取上下文
+            getContext(ro, slr);       //获取上下文
             ro.content = slr.current_line.substr(ro.span[0], ro.span[1] - ro.span[0]);
             if (ro.tag == "date")
             {
@@ -150,6 +150,7 @@ int RegularRule::recog(SingleLineResult &slr, std::vector<RecogObj> &tmp_result_
             tmp_result_list.push_back(ro);
         }
 
-    }while(rc>0);
-
+    } while(rc>0);
+    
+    return 0;
 }

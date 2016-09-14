@@ -3,7 +3,7 @@
 Program: test
 Description: 
 Date: 2016-07-05 21:07:39
-Last modified: 2016-09-09 14:14:50
+Last modified: 2016-09-09 19:56:28
 GCC version: 4.7.3
 */
 
@@ -57,7 +57,7 @@ int main(int argc, char* argv[]) {
     Recognizer* norm = new Recognizer(DICT_PATH, HMM_PATH, USER_DICT_PATH, root_dir, 1, 1);
     s = "小明硕士毕业于中国科学院计算所后在日本京都大学深造";
     std::vector<cppjieba::Word> jiebawords;
-    norm->segmenter->CutForSearch(s, jiebawords, true);
+    norm->segmenter->Cut(s, jiebawords, true);
     cout << s << endl;
     for(auto jbwd: jiebawords) {
         cout << jbwd.word << '\t' << jbwd.offset << "-" << jbwd.offset + jbwd.word.length() << endl;

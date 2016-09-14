@@ -15,50 +15,27 @@ Last modified: 2016-09-08 09:25:22
 #include <string>
 #include <iostream>
 
-#include "parameters.h"
-
 #include "util.h"
-#include "../3rd/include/Jieba.hpp"
 #include "regularRule.h"
+#include "parameters.h"
+#include "../3rd/include/Jieba.hpp"
+
 
 class Recognizer {
 public:
     Recognizer();
     ~Recognizer();
 
+    cppjieba::Jieba* segmenter = NULL;
+
     Recognizer(std::string, std::string, std::string, std::string, bool, bool); // first 3 parameters are to initialize the word segmenter. Could be written in hard codes
 
     RegularRule* _rule_list;
-    int readRegexRules(std::string conf_file) {
-        std::ifstream ifs(conf_file.c_str(), std::ios::in); 
-        if (!ifs) {
-            std::cerr << "Regex configuration file doesn't exist: "<< conf_file << std::endl;
-            return -1;
-        }
-        int i = 0;
-        std::string input_line = "";
 
-        while(ifs && i < REGEX_RULE_COUNT) {
-            if(getline(ifs, input_line)) {
-                if(input_line.empty())
-                    continue;
-                if(input_line[0] == '#')
-                    continue;
-                trim(input_line);
-                this->_rule_list[i].analysis(input_line);
-                this->_rule_list[i].setIndex(i);
-                ++i;
-            }
-        }
-        if (i != REGEX_RULE_COUNT) {
-            cerr << "Rules number is less than REGEX_RULE_COUNT: " << conf_file << endl;
-            exit(-1);
-        }
-        ifs.close();
-        return 0;
-    }
+    int readRegexRules(std::string conf_file);
 
-    cppjieba::Jieba* segmenter;
+    void initRegexSet(std::string);
+
 };
 
 #endif
