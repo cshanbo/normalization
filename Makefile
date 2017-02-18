@@ -1,8 +1,8 @@
 # -lpcrecpp
 #
 CXX=g++
-# CXXFLAGS = -g -std=c++11 -stdlib=libstdc++ -lpcrecpp -Wall -pedantic -I.
-CXXFLAGS = -g -std=c++11 -Wall -pedantic -I.
+# CXXFLAGS = -g -std=c++11 -stdlib=libstdc++ -Wall -pedantic -I.
+CXXFLAGS = -std=c++11 -stdlib=libstdc++
 INC_DIR = include
 SRC_DIR = src
 OBJ_DIR = obj
@@ -24,5 +24,5 @@ $(OBJ_DIR)/util.o: $(SRC_DIR)/util.cpp $(INC_DIR)/util.h
 	$(CXX) $(CXXFLAGS) -c $(SRC_DIR)/util.cpp -o $(OBJ_DIR)/util.o
 
 clean:
-	rm -rf $(OBJ_DIR)/*.o
-	rm -rf $(BIN_DIR)/*
+	rm -rf $(OBJ_DIR)
+	rm -rf $(BIN_DIR)

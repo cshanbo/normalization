@@ -1,2 +1,5 @@
 # Normalization 
-    1. Normalization of un-standardized words
+Normalization of un-standardized words like time, date, number, etc
+
+# installation
+
