@@ -9,7 +9,7 @@ Normalization of un-standardized words like time, date, number, etc
 2. [jieba](https://github.com/fxsjy/jieba)
 
 ## install
-> mkdir build
-> cd build
-> cmake ..
-> make
+mkdir build
+cd build
+cmake ..
+make
