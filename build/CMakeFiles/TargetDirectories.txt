@@ -1,0 +1,3 @@
+/Users/shanbo/chengshanbo/git/normalization/build/CMakeFiles/edit_cache.dir
+/Users/shanbo/chengshanbo/git/normalization/build/CMakeFiles/rebuild_cache.dir
+/Users/shanbo/chengshanbo/git/normalization/build/CMakeFiles/normal.dir

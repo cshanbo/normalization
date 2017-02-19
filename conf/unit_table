@@ -1,0 +1,202 @@
+#LENGTH
+光年	ly
+天文单位	au	AU
+千米	公里	km
+米	m
+分米	dm	DM
+厘米	cm	CM
+毫米	mm	MM	（mm）
+微米	μm	μM
+纳米	nm	NM
+埃	å	Å
+海里	nmi	NMI
+英里	mi	MI
+弗隆	fg	FG
+英寻	fm	FM
+码	yd	YD
+英尺	ft	FT
+英寸	in	IN
+
+#SIZE
+平方千米	km²
+公顷	ha
+公亩	are
+平方米	m²	㎡
+平方分米	dm²
+平方厘米	cm²
+平方毫米	mm²
+平方英里	mi²
+英亩	ac	AC
+平方竿	rd²	RD²	Rd²
+平方码	yd²	YD²	In²
+平方英尺	ft²	FT²
+平方英寸	in²	IN²
+
+#VOLUME
+立方米	m³
+公石	百升	hL	
+升	立方分米	dm³	L
+分升	dL
+厘升	cL
+毫升	mL
+立方厘米	cm³
+立方毫米	mm³
+立方码	yd³
+立方英尺	ft³
+英加仑	UK gal
+美加仑	US gal
+桶	bbl
+杯
+液盎司	fl oz
+茶匙	tsp
+
+#MASS
+吨	ton
+公担	q.
+千克	kg	Kg
+克	g
+毫克	mg
+微克	μg
+磅	lb
+盎司	oz
+克拉	ct
+格令	gr
+长吨	lt
+短吨	st
+英担	lh
+美担	sh
+打兰	dr
+公斤
+斤
+
+#PRESSURE
+兆帕	Mpa
+千帕	kPa	kpa	KPA
+帕	Pa	pa
+巴	B
+毫巴	mB
+托	torr
+标准大气压	ATM
+
+#POWER
+兆瓦	MW	Mw
+千瓦	kW	Kw
+瓦	W	w
+毫瓦	mW
+英制马力	BHP
+米制马力	MHP
+公斤·米/秒	斤•米/秒
+千卡/秒
+英热单位/秒
+英尺·磅/秒	英尺•磅/秒
+
+#ENERGY
+千卡	大卡	kcal
+卡	cal
+焦	J
+英热单位	btu
+尔格	erg
+克卡	therm
+千瓦·时	千瓦•时	kWh	kwh
+英尺·磅	英尺•磅	ft·lb
+公斤·米	公斤•米
+米制马力·时	米制马力•时
+英制马力·时	英制马力•时
+
+#FORCE
+千磅力	kip
+千牛	kN
+千克力	kp
+磅力	lbf
+牛	N
+磅达	pdl
+克力	gf
+达因	dyn
+英制吨力
+米制吨力
+美制吨力
+
+#TIME
+年	yr
+周	week
+天	d
+时	h
+分	min
+秒	s
+毫秒	ms
+微秒	μs
+纳秒	ns
+皮秒	ps
+飞秒	fs
+
+#VELOCITY
+光速
+千米/秒	km/s
+马赫	mach
+米/秒	m/s
+海里/时	kn
+英里/时	mi/h
+英尺/秒	ft/s
+千米/时	km/h
+英寸/秒	in/s
+
+#LIGHT
+瓦/平方厘米	W/cm²	w/cm²
+厘米烛光	ph
+流明/平方厘米	lm/cm²
+流明/平方英寸	lm/in²
+流明/平方英尺	lm/ft²
+英尺烛光	fC
+流明/平方米	lm/m²
+勒	lx
+
+#ANGLE
+圆周	circle
+百分度	gon
+度	°
+分	'
+秒	"
+弧度	rad
+毫弧度	mrad
+
+#DENSITY
+千克/立方厘米	kg/cm³
+克/立方厘米	g/cm³
+千克/立方米	kg/m³
+克/立方米	g/m³
+磅/立方英尺	lb/ft³
+磅/英加仑	lb/UK gal
+磅/英寸	lb/in³
+磅/美加仑	lb/US gal
+磅/（石油）桶	lb/bbl
+
+#DATA
+艾字节	EB
+拍字节	PB
+太字节	TB
+千兆字节	GB
+兆字节	MB	M
+千字节	KB
+字节
+比特	b
+
+#FLOW
+立方米/秒	m³/s
+立方米/小时	m³/h	m3/h
+立方米/分钟	m³/min	m3/min
+升/小时	L/h	dm³/h
+升/分钟	L/min	dm³/min
+升/秒	L/s	dm³/s
+
+#ELECTRIC-CURRENT
+安培	安	a	A	（A）
+毫安	ma	mA	（mA）
+微安	μa	μA	（μA）
+
+#VOLTAGE
+伏特	伏	V	v	（V）
+毫伏	mv	mV	（mV）
+千伏	kv	kV	（kV）
+
+#MONEY
+美元	$	刀
