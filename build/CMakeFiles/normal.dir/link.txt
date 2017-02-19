@@ -1,1 +1,0 @@
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++    -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/normal.dir/src/main.cpp.o CMakeFiles/normal.dir/src/parameter.cpp.o CMakeFiles/normal.dir/src/recognizer.cpp.o CMakeFiles/normal.dir/src/regularRule.cpp.o CMakeFiles/normal.dir/src/util.cpp.o  -o normal 
