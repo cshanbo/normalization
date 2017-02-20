@@ -4,7 +4,7 @@ Program: Regular expression rules cpp
 Description: 
 Shanbo Cheng: cshanbo@gmail.com
 Date: 2016-09-08 16:20:03
-Last modified: 2016-09-09 19:53:13
+Last modified: 2017-02-20 23:39:09
 GCC version: 4.9.3
 ***********************************************************/
 
@@ -28,12 +28,12 @@ int RegularRule::analysis(const string& input) {
 
     int err_offset = 0;
     const char* err;
-    this->_re = pcre_compile(this->_re_str.c_str(), PCRE_CASELESS | PCRE_MULTILINE, &err, &err_offset,  NULL);
+    // this->_re = pcre_compile(this->_re_str.c_str(), PCRE_CASELESS | PCRE_MULTILINE, &err, &err_offset,  NULL);
 
-    if(!_re) {
-        std::cerr << "pcre error [offset: " << err_offset << "] [err: " << err << "]" << std::endl;
-        return -1;
-    }
+    // if(!_re) {
+    //     std::cerr << "pcre error [offset: " << err_offset << "] [err: " << err << "]" << std::endl;
+    //     return -1;
+    // }
     return 0;
 }
 

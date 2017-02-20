@@ -3,8 +3,8 @@ project (normalization)
 
 include_directories(3rd/include include)
 
-# set(SOURCES src/main.cpp src/parameter.cpp src/recognizer.cpp src/regularRule.cpp src/util.cpp)
+set(SOURCES src/main.cpp src/parameter.cpp src/recognizer.cpp src/util.cpp)
 
-file(GLOB SOURCES "src/*.cpp")
+# file(GLOB SOURCES "src/*.cpp")
 
 add_executable(normal ${SOURCES})

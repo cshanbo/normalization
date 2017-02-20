@@ -4,7 +4,7 @@ Program: Normalization class cpp file
 Description: 
 Author: cshanbo@gmail.com
 Date: 2016-09-08 09:42:43
-Last modified: 2016-09-14 19:42:38
+Last modified: 2017-02-20 23:39:41
 **********************************************/
 
 #include <string>
@@ -38,8 +38,8 @@ int Recognizer::readRegexRules(std::string conf_file) {
             if(input_line[0] == '#')
                 continue;
             trim(input_line);
-            this->_rule_list[i].analysis(input_line);
-            this->_rule_list[i].setIndex(i);
+            // this->_rule_list[i].analysis(input_line);
+            // this->_rule_list[i].setIndex(i);
             ++i;
         }
     }
