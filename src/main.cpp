@@ -3,7 +3,7 @@
 Program: test
 Description: 
 Date: 2016-07-05 21:07:39
-Last modified: 2017-02-20 23:34:44
+Last modified: 2017-02-23 11:31:48
 GCC version: 4.7.3
 */
 
@@ -40,13 +40,13 @@ int main(int argc, char* argv[]) {
         }
     }
     int i;
-    // string s;
-    // pcrecpp::RE re("(\\w+):(\\d+)");
-    // if (re.error().length() > 0) {
-    //     std::cout << "PCRE compilation failed with error: " << re.error() << "\n";
-    // }
-    // if (re.PartialMatch("root:1234", &s, &i))
-    //     std::cout << s << " : " << i << std::endl;
+    string s;
+    pcrecpp::RE re("(\\w+):(\\d+)");
+    if (re.error().length() > 0) {
+        std::cout << "PCRE compilation failed with error: " << re.error() << "\n";
+    }
+    if (re.PartialMatch("root:1234", &s, &i))
+        std::cout << s << " : " << i << std::endl;
 
 
     const string DICT_PATH = "./3rd/dict/jieba.dict.utf8";
