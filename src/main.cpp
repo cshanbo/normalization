@@ -3,7 +3,7 @@
 Program: test
 Description: 
 Date: 2016-07-05 21:07:39
-Last modified: 2017-02-23 11:31:48
+Last modified: 2017-03-02 20:49:07
 GCC version: 4.7.3
 */
 
@@ -30,36 +30,33 @@ int main(int argc, char* argv[]) {
     }
 
     string root_dir = "../conf";
-    std::ifstream ifs(argv[1], std::ios::in);
 
-    string line = "";
-    while(ifs) {
-        if(getline(ifs, line)) {
-            trim(line);
-            cout << line << endl;
-        }
-    }
     int i;
     string s;
     pcrecpp::RE re("(\\w+):(\\d+)");
     if (re.error().length() > 0) {
         std::cout << "PCRE compilation failed with error: " << re.error() << "\n";
     }
-    if (re.PartialMatch("root:1234", &s, &i))
-        std::cout << s << " : " << i << std::endl;
 
 
-    const string DICT_PATH = "./3rd/dict/jieba.dict.utf8";
-    const string HMM_PATH = "./3rd/dict/hmm_model.utf8";
-    const string USER_DICT_PATH = "./3rd/dict/user.dict.utf8";
+    const string DICT_PATH = "../3rd/dict/jieba.dict.utf8";
+    const string HMM_PATH = "../3rd/dict/hmm_model.utf8";
+    const string USER_DICT_PATH = "../3rd/dict/user.dict.utf8";
 
     cppjieba::Jieba jieba(DICT_PATH, HMM_PATH, USER_DICT_PATH);
     Recognizer* norm = new Recognizer(DICT_PATH, HMM_PATH, USER_DICT_PATH, root_dir, 1, 1);
-    // s = "小明硕士毕业于中国科学院计算所后在日本京都大学深造";
-    // std::vector<cppjieba::Word> jiebawords;
-    // norm->segmenter->Cut(s, jiebawords, true);
-    // cout << s << endl;
-    // for(auto jbwd: jiebawords) {
-    //     cout << jbwd.word << '\t' << jbwd.offset << "-" << jbwd.offset + jbwd.word.length() << endl;
+    // string line = "";
+    // std::ifstream ifs(argv[1], std::ios::in);
+    // while(ifs) {
+    //     if(getline(ifs, line)) {
+    //         trim(line);
+    //         std::vector<cppjieba::Word> jiebawords;
+    //         norm->segmenter->Cut(line, jiebawords, true);
+    //         for(auto jbwd: jiebawords) {
+    //             cout << jbwd.word << " ";
+    //             // cout << jbwd.word << '\t' << jbwd.offset << "-" << jbwd.offset + jbwd.word.length() << endl;
+    //         }
+    //     }
     // }
+    return 0;
 }

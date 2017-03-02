@@ -26,7 +26,7 @@ public:
     Recognizer();
     ~Recognizer();
 
-    cppjieba::Jieba* segmenter = NULL;
+    cppjieba::Jieba* segmenter;
 
     Recognizer(std::string, std::string, std::string, std::string, bool, bool); // first 3 parameters are to initialize the word segmenter. Could be written in hard codes
 

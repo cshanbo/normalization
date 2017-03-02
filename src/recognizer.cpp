@@ -4,22 +4,26 @@ Program: Normalization class cpp file
 Description: 
 Author: cshanbo@gmail.com
 Date: 2016-09-08 09:42:43
-Last modified: 2017-02-20 23:39:41
+Last modified: 2017-03-02 20:54:50
 **********************************************/
 
 #include <string>
+#include "../include/regularRule.h"
 #include "../include/recognizer.h"
 
 Recognizer::Recognizer() {
     segmenter = NULL;
+    _rule_list = NULL;
 }
 
 Recognizer::Recognizer(std::string DICT_PATH, std::string HMM_PATH, std::string USER_DICT_PATH, std::string conf_dir, bool use_segment, bool use_classifier) {
     segmenter = new cppjieba::Jieba(DICT_PATH, HMM_PATH, USER_DICT_PATH);
+    _rule_list = new RegularRule[REGEX_RULE_COUNT];
 }
 
 Recognizer::~Recognizer() {
     delete segmenter;
+    delete[] _rule_list;
 }
 
 int Recognizer::readRegexRules(std::string conf_file) {
@@ -38,8 +42,8 @@ int Recognizer::readRegexRules(std::string conf_file) {
             if(input_line[0] == '#')
                 continue;
             trim(input_line);
-            // this->_rule_list[i].analysis(input_line);
-            // this->_rule_list[i].setIndex(i);
+            this->_rule_list[i].analysis(input_line);
+            this->_rule_list[i].setIndex(i);
             ++i;
         }
     }
