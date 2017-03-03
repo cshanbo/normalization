@@ -20,7 +20,7 @@ Last modified: 2016-09-08 09:25:22
 #include "parameters.h"
 #include "../3rd/include/Jieba.hpp"
 
-
+class RegularRule;
 class Recognizer {
 public:
     Recognizer();
@@ -34,7 +34,7 @@ public:
 
     int readRegexRules(std::string conf_file);
 
-    void initRegexSet(std::string);
+    // void initRegexSet(std::string);
 
 };
 

@@ -31,10 +31,10 @@ public:
 
     int _priority;
     int _confidence;
-    int analysis(const std::string&);
-    int analysisPattern(const std::string);
-    int recog(SingleLineResult&, std::vector<RecogObj>&);
-    int recogOnce(SingleLineResult&, int);  //int is used as offset
+    // int analysis(const std::string&);
+    // int analysisPattern(const std::string);
+    // int recog(SingleLineResult&, std::vector<RecogObj>&);
+    // int recogOnce(SingleLineResult&, int);  //int is used as offset
     int setIndex(int);
 };
 

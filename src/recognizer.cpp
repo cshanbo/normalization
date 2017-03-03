@@ -4,7 +4,7 @@ Program: Normalization class cpp file
 Description: 
 Author: cshanbo@gmail.com
 Date: 2016-09-08 09:42:43
-Last modified: 2017-03-02 20:54:50
+Last modified: 2017-03-03 13:49:50
 **********************************************/
 
 #include <string>
@@ -42,8 +42,8 @@ int Recognizer::readRegexRules(std::string conf_file) {
             if(input_line[0] == '#')
                 continue;
             trim(input_line);
-            this->_rule_list[i].analysis(input_line);
-            this->_rule_list[i].setIndex(i);
+            // this->_rule_list[i].analysis(input_line);
+            // this->_rule_list[i].setIndex(i);
             ++i;
         }
     }
@@ -56,46 +56,46 @@ int Recognizer::readRegexRules(std::string conf_file) {
 }
 
 
-void Recognizer::initRegexSet(std::string conf_file) {
-    ifstream ifs(conf_file.c_str(), ios::in);
-    if (!ifs) {
-        cerr << "can't find regex configure set: " << conf_file + "/regex_set" << endl;
-        exit(-1);
-    }
-    string input_line;
-    string old_region = "";
-    while(ifs) {
-        if(getline(ifs, input_line)) {
-            trim(input_line);
-            if (input_line.empty())
-                continue;
-            if (input_line[0] == '[') {
-                input_line = input_line.substr(1, input_line.size() - 2);
-                // if (old_region != input_line)post_process_date_time
-                //     old_region = input_line;
-                continue;
-            }
-            vector<string> entry_list;
-            split(input_line, "|", entry_list);
-            // for (int i = 0; i < entry_list.size(); ++i)
-            // {
-            //     if (old_region == "REGION_DATE")
-            //         this->_regex_date_set.insert(entry_list[i]);
-            //     else if (old_region == "REGION_TIME")
-            //         this->_regex_time_set.insert(entry_list[i]);
-            //     else if (old_region == "REGION_NUM")
-            //         this->_regex_num_set.insert(entry_list[i]);
-            //     else if (old_region == "REGION_PHONE_IP")
-            //         this->_regex_pi_set.insert(entry_list[i]);//pi是指phone number 和ip
-            //     else if (old_region == "REGION_URL")
-            //         this->_regex_url_set.insert(entry_list[i]);
-            //     else if (old_region == "REGION_EMAIL")
-            //         this->_regex_email_set.insert(entry_list[i]);
-            // }
-
-        }
-    }
-    ifs.close();
-
-}
+// void Recognizer::initRegexSet(std::string conf_file) {
+//     ifstream ifs(conf_file.c_str(), ios::in);
+//     if (!ifs) {
+//         cerr << "can't find regex configure set: " << conf_file + "/regex_set" << endl;
+//         exit(-1);
+//     }
+//     string input_line;
+//     string old_region = "";
+//     while(ifs) {
+//         if(getline(ifs, input_line)) {
+//             trim(input_line);
+//             if (input_line.empty())
+//                 continue;
+//             if (input_line[0] == '[') {
+//                 input_line = input_line.substr(1, input_line.size() - 2);
+//                 // if (old_region != input_line)post_process_date_time
+//                 //     old_region = input_line;
+//                 continue;
+//             }
+//             vector<string> entry_list;
+//             split(input_line, "|", entry_list);
+//             // for (int i = 0; i < entry_list.size(); ++i)
+//             // {
+//             //     if (old_region == "REGION_DATE")
+//             //         this->_regex_date_set.insert(entry_list[i]);
+//             //     else if (old_region == "REGION_TIME")
+//             //         this->_regex_time_set.insert(entry_list[i]);
+//             //     else if (old_region == "REGION_NUM")
+//             //         this->_regex_num_set.insert(entry_list[i]);
+//             //     else if (old_region == "REGION_PHONE_IP")
+//             //         this->_regex_pi_set.insert(entry_list[i]);//pi是指phone number 和ip
+//             //     else if (old_region == "REGION_URL")
+//             //         this->_regex_url_set.insert(entry_list[i]);
+//             //     else if (old_region == "REGION_EMAIL")
+//             //         this->_regex_email_set.insert(entry_list[i]);
+//             // }
+// 
+//         }
+//     }
+//     ifs.close();
+// 
+// }
 

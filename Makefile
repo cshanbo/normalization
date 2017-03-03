@@ -14,11 +14,11 @@ $(BIN_DIR):
 $(OBJ_DIR):
 	mkdir -p $(OBJ_DIR)
 
-$(OBJ_DIR)/recognizer.o: $(SRC_DIR)/recognizer.cpp $(INC_DIR)/recognizer.h
+$(OBJ_DIR)/recognizer.o: $(SRC_DIR)/recognizer.cpp $(INC_DIR)/recognizer.h $(SRC_DIR)/regularRule.cpp
 	$(CXX) $(CXXFLAGS) -c $(SRC_DIR)/recognizer.cpp -o $(OBJ_DIR)/recognizer.o
 
-$(OBJ_DIR)/regularRule.o: $(SRC_DIR)/regularRule.cpp $(INC_DIR)/regularRule.h
-	$(CXX) $(CXXFLAGS) -c -lpcrecpp $(SRC_DIR)/regularRule.cpp -o $(OBJ_DIR)/regularRule.o
+$(OBJ_DIR)/regularRule.o: $(SRC_DIR)/regularRule.cpp $(INC_DIR)/regularRule.h $(INC_DIR)/parameters.h
+	$(CXX) $(CXXFLAGS) -c $(SRC_DIR)/regularRule.cpp -o $(OBJ_DIR)/regularRule.o
 
 $(OBJ_DIR)/util.o: $(SRC_DIR)/util.cpp $(INC_DIR)/util.h
 	$(CXX) $(CXXFLAGS) -c $(SRC_DIR)/util.cpp -o $(OBJ_DIR)/util.o

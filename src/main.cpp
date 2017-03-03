@@ -3,7 +3,7 @@
 Program: test
 Description: 
 Date: 2016-07-05 21:07:39
-Last modified: 2017-03-02 20:49:07
+Last modified: 2017-03-03 12:52:00
 GCC version: 4.7.3
 */
 
@@ -14,6 +14,7 @@ GCC version: 4.7.3
 
 #include "../include/util.h"
 #include "../include/recognizer.h"
+#include "../include/regularRule.h"
 #include "../3rd/include/Jieba.hpp"
 
 using namespace std;
